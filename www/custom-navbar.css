@@ -1,0 +1,84 @@
+.navbar{
+/**background-image: linear-gradient(90deg, #012E61, #024794);**/
+background-color: #404E67;
+
+}	
+.navbar-brand{
+	color : #6fd9de!important;
+	margin-left: 46px!important;
+}
+
+#mytable{
+	width: 76%!important;
+    height: auto;
+    margin-left: 156px;
+    margin-top: -24px;
+}
+
+.col-sm-3{
+	margin-left: 147px!important;
+	margin-top: 33px!important;
+}
+
+.container-fluid{
+	padding-right: 15px!important;
+     padding-left: 0px!important; 
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+@media (min-width: 768px)
+.col-sm-3 {
+    width: 20%!important;
+}
+
+h4{
+	margin-bottom: 29px!important;
+	color: #16459a!important;
+	margin-left: 55px;
+}
+
+#Milageplot{
+	margin-top: 30px!important;
+}
+
+#Cylinderplot{
+	margin-top: 30px!important;
+}
+
+#Horseplot{
+	margin-top: 30px!important;
+}
+
+body{
+ 	/**background: url(1.jpg) no-repeat center center fixed; **/
+ 	/**background-image: linear-gradient(90deg, #48cfad, #3bafda); **/
+
+
+ }   
+ul > li > a[data-value='Data Snapshot'] > .tab-pane{
+ 	background-image: linear-gradient(90deg, #48cfad, #3bafda);
+ }
+
+.tab-content > div[data-value='Data Snapshot'] {
+	background-image: linear-gradient(90deg, #48cfad, #3bafda);
+	width: 103%!important;
+}
+
+.tab-content > div[data-value !='Data Snapshot'] {
+	color:#6fd9de!important;
+}
+
+.tab-content > div[data-value='Visualization'] {
+	color: #f5f7fa;
+
+}
+
+.tabbable{
+	margin-left: 42px;
+    margin-right: 31px!important;
+}
+
+
+.navbar-default .navbar-nav>li>a {
+    color: #6fd9de;
+}
