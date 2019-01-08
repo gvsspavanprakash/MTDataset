@@ -1,12 +1,9 @@
 library(ggplot2)
 library(shinyjs)
-library(rsconnect)
+
 server <- function(input, output, session){
 
-  output$summary <- renderPrint({
-    summary(mpg)
-  })
-  
+  ##This observe function is to show and hide reset button based on the dropdown values
   observe({
     shinyjs::hide("reset")
     
@@ -14,6 +11,7 @@ server <- function(input, output, session){
       shinyjs::show("reset")
   })
   
+  ##This observeevent is to reset all the dropdown values to 'All' on click
   observeEvent(input$reset,{
     updateSelectInput(session, "man",
                       "Manufacturer:",
@@ -32,6 +30,7 @@ server <- function(input, output, session){
     
     })
   
+  ### This render function is to display the data of mtcars as per the dropdown selection
   output$mytable <- DT::renderDataTable({
     
     data <- mpg
@@ -49,18 +48,21 @@ server <- function(input, output, session){
 
   })
   
+  ##This render function is to display the Distribution of Cars by Mileage graph
   output$Milageplot <- renderPlot({
     ggplot(mtcars, aes(mpg)) +
       geom_histogram(binwidth = 4) + xlab('Miles per Gallon') + ylab('Number of Cars') + 
       ggtitle('Distribution of Cars by Mileage')
   })
   
+  ##This render function is to display the Distribution of Cars by Cylinders
   output$Cylinderplot <- renderPlot({
     ggplot(mtcars, aes(cyl)) +
       geom_histogram(binwidth=1) + xlab('Cylinders') + ylab('Number of Cars') +
       ggtitle('Distribution of Cars by Cylinders')
   })
   
+  ##This render function is to display the Distribution of Cars by Horsepower
   output$Horseplot <- renderPlot({
     ggplot(mtcars, aes(hp)) +
       geom_histogram(binwidth=20) + xlab('horsepower') + ylab('Number of Cars') +

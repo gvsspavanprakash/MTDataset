@@ -49,23 +49,15 @@ h4{
 	margin-top: 30px!important;
 }
 
-body{
- 	/**background: url(1.jpg) no-repeat center center fixed; **/
- 	/**background-image: linear-gradient(90deg, #48cfad, #3bafda); **/
 
 
- }   
-ul > li > a[data-value='Data Snapshot'] > .tab-pane{
+/*ul > li > a[data-value='Data Snapshot'] {
  	background-image: linear-gradient(90deg, #48cfad, #3bafda);
- }
+ }*/
 
 .tab-content > div[data-value='Data Snapshot'] {
 	background-image: linear-gradient(90deg, #48cfad, #3bafda);
 	width: 103%!important;
-}
-
-.tab-content > div[data-value !='Data Snapshot'] {
-	color:#6fd9de!important;
 }
 
 .tab-content > div[data-value='Visualization'] {

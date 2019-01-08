@@ -1,6 +1,13 @@
 library(shiny)
 library(ggplot2)
 library(shinyjs)
+
+
+"""The layout of the application is a navbar with two tabs - Data Snapshot & visualization
+    Data Snapshot tab contains three select dropdown with a actionButton and a datatable
+    Visualization tab contains a tabsetPanel with three tabs for plots
+"""
+
 navbarPage('MT Cars Dashboard',theme="custom-navbar.css",
            tabPanel('Data Snapshot',
                     
